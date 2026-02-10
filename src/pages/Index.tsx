@@ -64,10 +64,10 @@ const Index = () => {
               delay={250}
             />
             <StatCard
-              title="Eficiencia Operativa"
-              value="Optimizada"
-              subtitle="Eliminación de errores"
-              icon={Sparkles}
+              title="ROI Promedio"
+              value={`${stats.promedioROI}%`}
+              subtitle="Retorno de inversión"
+              icon={TrendingUp}
               variant="secondary"
               delay={325}
             />

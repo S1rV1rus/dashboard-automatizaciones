@@ -109,6 +109,45 @@ export function ProjectCard({ project, delay = 0 }: ProjectCardProps) {
           <p className="text-[10px] uppercase tracking-wider text-muted-foreground mt-1">Ahorro anual</p>
         </div>
       </div>
+      {/* ROI Section */}
+      <div className="space-y-3 pt-2">
+        <div className="flex items-center justify-between">
+          <div className="flex items-center gap-2">
+            <div className="p-1.5 rounded-md bg-secondary/10 text-secondary">
+              <TrendingUp className="h-3.5 w-3.5" />
+            </div>
+            <span className="text-[11px] font-bold uppercase tracking-wider text-muted-foreground">Impacto y ROI</span>
+          </div>
+          <div className="flex items-center gap-2">
+            <span className="text-xs font-medium text-muted-foreground">Retorno:</span>
+            <span className="text-sm font-bold text-secondary">{project.roi}%</span>
+          </div>
+        </div>
+        <div className="h-2 w-full bg-muted rounded-full overflow-hidden p-[1px]">
+          <div
+            className="h-full bg-gradient-to-r from-secondary/80 to-secondary rounded-full transition-all duration-1000 ease-out"
+            style={{
+              width: `${Math.min(project.roi / 10, 100)}%`,
+            }}
+          />
+        </div>
+        <div className="flex justify-between items-center">
+          <p className="text-[10px] text-muted-foreground/80">
+            Eficiencia: <span className="text-foreground font-medium">{efficiency}x veces más rápido</span>
+          </p>
+          <div className="flex gap-1">
+            {[1, 2, 3].map((i) => (
+              <div
+                key={i}
+                className={cn(
+                  "w-1 h-3 rounded-full",
+                  i <= Math.ceil(project.roi / 400) ? "bg-secondary" : "bg-muted"
+                )}
+              />
+            ))}
+          </div>
+        </div>
+      </div>
 
       {/* Footer */}
       <div className="flex items-center justify-between pt-2">
