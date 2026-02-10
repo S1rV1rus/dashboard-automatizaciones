@@ -1,73 +1,38 @@
-# Welcome to your Lovable project
+# Dashboard de Automatizaciones - Macstation
 
-## Project info
+Dashboard interactivo que muestra las soluciones de automatización inteligente implementadas para optimizar procesos y ahorrar tiempo.
 
-**URL**: https://lovable.dev/projects/REPLACE_WITH_PROJECT_ID
+## Proyectos Incluidos
 
-## How can I edit this code?
+1. **MSplitter - Recibos de Sueldo**: Automatización de la distribución de recibos de sueldo mediante procesamiento seguro y local de PDFs.
+2. **Control de Caja**: Dashboard de conciliación para validar ingresos por sucursal contra reportes de sistema (Odoo).
+3. **AutoID - Clasificación de Gastos**: Sistema de asignación automática de IDs contables mediante mapeo inteligente.
+4. **Reporte 3CX**: Análisis de eficiencia del equipo de ventas basado en logs de llamadas en tiempo real.
 
-There are several ways of editing your application.
+## Tecnologías Utilizadas
 
-**Use Lovable**
+- **Vite**: Build tool rápido para aplicaciones web modernas.
+- **React**: Biblioteca para construir interfaces de usuario.
+- **Tailwind CSS**: Framework de CSS para diseño rápido.
+- **shadcn/ui**: Componentes de UI reutilizables y accesibles.
+- **Lucide React**: Set de iconos optimizado.
+- **TypeScript**: Tipado estático para mejor desarrollo.
 
-Simply visit the [Lovable Project](https://lovable.dev/projects/REPLACE_WITH_PROJECT_ID) and start prompting.
+## Desarrollo Local
 
-Changes made via Lovable will be committed automatically to this repo.
-
-**Use your preferred IDE**
-
-If you want to work locally using your own IDE, you can clone this repo and push changes. Pushed changes will also be reflected in Lovable.
-
-The only requirement is having Node.js & npm installed - [install with nvm](https://github.com/nvm-sh/nvm#installing-and-updating)
-
-Follow these steps:
+Para ejecutar este proyecto localmente, asegúrate de tener instalado Node.js.
 
 ```sh
-# Step 1: Clone the repository using the project's Git URL.
-git clone <YOUR_GIT_URL>
+# Instalar dependencias
+npm install
 
-# Step 2: Navigate to the project directory.
-cd <YOUR_PROJECT_NAME>
-
-# Step 3: Install the necessary dependencies.
-npm i
-
-# Step 4: Start the development server with auto-reloading and an instant preview.
-npm run dev
+# Iniciar servidor de desarrollo
+npm run dev -- --port 9000
 ```
 
-**Edit a file directly in GitHub**
+## Build para Producción
 
-- Navigate to the desired file(s).
-- Click the "Edit" button (pencil icon) at the top right of the file view.
-- Make your changes and commit the changes.
-
-**Use GitHub Codespaces**
-
-- Navigate to the main page of your repository.
-- Click on the "Code" button (green button) near the top right.
-- Select the "Codespaces" tab.
-- Click on "New codespace" to launch a new Codespace environment.
-- Edit files directly within the Codespace and commit and push your changes once you're done.
-
-## What technologies are used for this project?
-
-This project is built with:
-
-- Vite
-- TypeScript
-- React
-- shadcn-ui
-- Tailwind CSS
-
-## How can I deploy this project?
-
-Simply open [Lovable](https://lovable.dev/projects/REPLACE_WITH_PROJECT_ID) and click on Share -> Publish.
-
-## Can I connect a custom domain to my Lovable project?
-
-Yes, you can!
-
-To connect a domain, navigate to Project > Settings > Domains and click Connect Domain.
-
-Read more here: [Setting up a custom domain](https://docs.lovable.dev/features/custom-domain#custom-domain)
+```sh
+# Generar bundle de producción
+npm run build
+```
